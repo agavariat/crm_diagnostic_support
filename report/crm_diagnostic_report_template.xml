@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- template body -->
+        <template id="crm_diagnostic_template_boy">
+            <t t-call="web.basic_layout">
+                <div class="page">
+                        <table style="border-spacing:0;margin-bottom:0;" class="table">
+                            <thead>
+                                <tr>
+                                    <td style="width:20%; border-left:1px solid; border-top: 1px solid; border-bottom: 1px solid;" >
+                                        <img t-if="o.company_id.logo" t-att-src="image_data_uri(o.company_id.logo)" style="max-height: 70px;" alt="Logo"/>
+                                    </td>
+                                    <td style="width:60%; border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid; text-align: center;">
+                                        <strong><span>"Diagnóstico SG-SST"</span></strong>
+                                    </td>
+                                    <td style="width:10%; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid; text-align: right;">
+                                        <span>Fecha:</span>
+                                    </td>
+                                    <td style="width:10%; border-left: 1px solid; border-top: 1px solid; border-right: 1px solid; border-bottom: 1px solid;">
+                                        <span t-esc="o.fecha"/>
+                                    </td>
+                                </tr>
+                            </thead>
+                        </table>
+                        <table style="border-spacing:0;margin-bottom:0;" class="table">
+                            <thead>
+                                <tr>
+                                    <td style="width:10%; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid;vertical-align:middle; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;">Valoracion de la empresa:</span>
+                                    </td>
+                                    <td style="width:10%; border-bottom: 1px solid; vertical-align:middle; border-right: 1px solid; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;" t-esc="o.valuacion_diagnostico"/>
+                                    </td>
+                                </tr>
+                            
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                        <div class="container-fluid" style="border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid">
+                            <span>Resultado Diagnóstico:</span>
+                            <p t-esc="o.diagnostico"/>
+                        </div>
+                       
+                            <div class="row" style="margin-top:10px; border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid">
+                                <div style="margin-bottom: 15px; margin-top: 15px;" class="col-6">
+                                    <img t-att-src="image_data_uri(o.char_img_bar)" style="max-width:600px;"/>
+                                </div>
+                                <div class="col-6" style="margin-top:40px">
+                                	 <table class="table table-striped" >
+                                	<thead>
+                                		<tr >
+                                			<th>MEJORA CONTINUA</th>
+                                			<th>ESTANDAR</th>
+                                			<th>OBTENIDO</th>
+                                			<th>%</th>
+                                		</tr>
+                                	</thead>
+                                	<tbody>
+                                		<tr >
+                                			<th>PLANEAR</th>
+                                			<th>13</th>
+                                			<th></th>
+                                			<th></th>
+                                		</tr>
+                                		<tr >
+                                			<th>HACER</th>
+                                			<th>12</th>
+                                			<th></th>
+                                			<th></th>
+                                		</tr>
+                                		<tr >
+                                			<th>VERIFICAR</th>
+                                			<th>3</th>
+                                			<th></th>
+                                			<th></th>
+                                		</tr>
+                                		<tr >
+                                			<th>ACTUAR</th>
+                                			<th>2</th>
+                                			<th></th>
+                                			<th></th>
+                                		</tr>
+                                		<tr style="background-color: #bababa;text-white">
+                                			<th>TOTAL</th>
+                                			<th>30</th>
+                                			<th></th>
+                                			<th></th>
+                                		</tr>
+                                	</tbody>
+                                </table>
+                                </div>
+                            </div>
+                       
+
+                </div>
+            </t>
+        </template>
+
+        <!-- principal template called from action -->
+        <template id="report_crm_diagnostic_template">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="crm_diagnostic.crm_diagnostic_template_boy"/>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>
