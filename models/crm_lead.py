@@ -293,7 +293,7 @@ class CrmLead(models.Model):
 
     @api.model
     def action_to_return_to_crm_diagnostic(self, crm_diagnostic_id):
-        search_view = self.env.ref('crm_diagnostic.crm_diagnostic_view')
+        search_view = self.env.ref('crm_diagnostic_support.crm_diagnostic_view')
         return {
             'type': 'ir.actions.act_window',
             'view_mode': 'form',

@@ -34,7 +34,7 @@ class CrmDiagnostic(models.Model):
     valuacion_diagnostico = fields.Selection(
         selection=[
             ('competitividad', 'Nivel de competitividad'),
-            ('incipiente', 'Incipiento'),
+            ('incipiente', 'Incipiente'),
             ('aceptable', 'Aceptable'),
             ('confiable', 'Confiable')],
         string='Valuación de diagnóstico'
