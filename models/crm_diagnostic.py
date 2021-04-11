@@ -42,7 +42,7 @@ class CrmDiagnostic(models.Model):
     )
 
     data2=fields.Char('',compute="_get_chart")
-    data5=fields.Char('', compute="_get_chart")
+
     
     company_id = fields.Many2one(
         'res.company',
@@ -159,10 +159,11 @@ class CrmDiagnostic(models.Model):
             for line in diagnostic.crm_diagnostic_line_production_ids:
                 actuar += int(line.puntaje)
                 
-            data5 = self.puntajehacer([planear, hacer, verificar, actuar])
+            
             data2 = self.make_chart_bar([planear, hacer, verificar, actuar])
             diagnostic.char_img_bar = base64.b64encode(data2)
-
+            diagnostic.puntajehacer = planear
+            
             
     @api.model
     def create(self, vals):
