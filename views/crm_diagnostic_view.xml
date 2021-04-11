@@ -18,7 +18,8 @@
                             <group name="left data">
                                 <field name="lead_id" invisible="1"/> 
                                 <field name="fecha" string="Fecha"/>
-								<field name="puntajehacer"/>
+								<field name="diagnostic_chart_two"/>
+								
                             </group>
                             <group> 
                                 <field name="valuacion_diagnostico"/>	
