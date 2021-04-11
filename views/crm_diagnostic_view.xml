@@ -22,6 +22,14 @@
                             <group> 
                                 <field name="valuacion_diagnostico"/>	
                             </group>
+							<group string="Información importante">
+                        
+                                <br/><field name="x_actecon" style="width:80%%"/>
+                                <field name="x_acteconcod" style="width:80%%"/>
+                                <field name="x_nempleados" style="width:80%%"/>
+                                <field name="x_riesgo" style="width:80%%"/>
+
+                            </group>
                         </group>
                         
 

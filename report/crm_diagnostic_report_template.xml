@@ -23,6 +23,22 @@
                                 </tr>
                             </thead>
                         </table>
+
+                        <table style="border-spacing:0;margin-bottom:0;" class="table">
+                            <thead>
+                                <tr>
+                                    <td style="width:10%; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid;vertical-align:middle; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;">Información Importante:</span>
+                                    </td>
+                                    <td style="width:10%; border-bottom: 1px solid; vertical-align:middle; border-right: 1px solid; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;" t-esc="o.x_nempleados"/>
+                                    </td>
+                                </tr>
+                            
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
                         <table style="border-spacing:0;margin-bottom:0;" class="table">
                             <thead>
                                 <tr>
@@ -59,32 +75,32 @@
                                 	<tbody>
                                 		<tr >
                                 			<th>PLANEAR</th>
-                                			<th>13</th>
-                                			<th></th>
-                                			<th></th>
+                                			<th>65</th>
+                                			<th><field name="puntaje_planear"/></th>
+                                			<th><field name="puntaje_pplanear"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>HACER</th>
-                                			<th>12</th>
-                                			<th></th>
-                                			<th></th>
+                                			<th>60</th>
+                                			<th><field name="puntaje_hacer"/></th>
+                                			<th><field name="puntaje_phacer"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>VERIFICAR</th>
-                                			<th>3</th>
-                                			<th></th>
-                                			<th></th>
+                                			<th>15</th>
+                                			<th><field name="puntaje_verificar"/></th>
+                                			<th><field name="puntaje_pverificar"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>ACTUAR</th>
-                                			<th>2</th>
-                                			<th></th>
-                                			<th></th>
+                                			<th>10</th>
+                                			<th><field name="puntaje_actuar"/></th>
+                                			<th><field name="puntaje_pactuar"/></th>
                                 		</tr>
                                 		<tr style="background-color: #bababa;text-white">
                                 			<th>TOTAL</th>
-                                			<th>30</th>
-                                			<th></th>
+                                			<th>150</th>
+                                			<th><field name="puntaje_total"/></th>
                                 			<th></th>
                                 		</tr>
                                 	</tbody>
@@ -96,6 +112,25 @@
                 </div>
             </t>
         </template>
+
+        <table style="border-spacing:0;margin-bottom:0;" class="table">
+                            <thead>
+                                <tr>
+                                    <td style="width: 20%; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid; border-right: 1px solid; text-align: right;">
+                                        <strong><span style="font-size: 14px;">Hecho por:</span></strong>
+                                        <span style="font-size: 14px;" t-esc="o.user_id"/>
+                                    </td>
+                                     <td style="width: 60%; border-top: 1px solid; border-left: 1px solid;border-bottom: 1px solid; border-right: 1px solid; text-align: right;">
+                                        <span></span>
+                                    </td>
+                                    <td style="border-top:1px solid; border-bottom: 1px solid; vertical-align:middle; border-right: 1px solid; horizontal-align:middle; border-top: 1px solid;" rowspan="3">
+                                        <span></span>
+                                    </td>
+                                </tr>
+                                
+                            </thead>
+                            <tbody></tbody>
+                        </table>
 
         <!-- principal template called from action -->
         <template id="report_crm_diagnostic_template">
