@@ -146,7 +146,6 @@ class CrmDiagnostic(models.Model):
             hacer = 0
             verificar = 0
             actuar = 0
-            puntajehacer = 0
 
             for line in diagnostic.crm_diagnostic_line_innovation_ids:
                 planear += int(line.puntaje)
@@ -156,8 +155,7 @@ class CrmDiagnostic(models.Model):
                 verificar += int(line.puntaje)
             for line in diagnostic.crm_diagnostic_line_production_ids:
                 actuar += int(line.puntaje)
-                actuar = puntajehacer
-           
+                
             
             data2 = self.make_chart_bar([planear, hacer, verificar, actuar])
             diagnostic.char_img_bar = base64.b64encode(data2)
