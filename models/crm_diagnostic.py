@@ -53,6 +53,7 @@ class CrmDiagnostic(models.Model):
     crm_diagnostic_line_innovation_ids = fields.One2many(
         'crm.diagnostic.line',
         compute='_get_lines_for_areas')
+
     # records for Orientaciones de bioseguridad
     crm_diagnostic_line_orientation_ids = fields.One2many(
         'crm.diagnostic.line',
@@ -65,6 +66,9 @@ class CrmDiagnostic(models.Model):
     crm_diagnostic_line_production_ids = fields.One2many(
         'crm.diagnostic.line',
         compute='_get_lines_for_areas')
+
+    puntajehacer = fields.Char(string="hacer")
+    puntajehacer = crm_diagnostic_line_innovation_ids
 
     diagnostic_chart = fields.Html(
         compute='_get_chart', store=True, sanitize=False)
