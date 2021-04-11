@@ -66,7 +66,7 @@
                         </div>
                         <field name="crm_diagnostic_line_ids" mode="tree">
                             <tree>
-                                <field name="data2"/>
+                                <field name="_get_chart"/>
                             </tree>
                         </field>
 
