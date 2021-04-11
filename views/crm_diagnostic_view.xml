@@ -67,7 +67,7 @@
                                 			<th>ACTUAR</th>
                                 			<th>10</th>
                                 			<th><field name="puntaje_actuar"/></th>
-                                			<th></th>
+                                			<th><field name="puntaje_actuar"/>/10*100</th>
                                 		</tr>
                                 		<tr style="background-color: #bababa;text-white">
                                 			<th>TOTAL</th>
