@@ -31,6 +31,7 @@ class CrmDiagnostic(models.Model):
     codigo_formulario = fields.Char(string="Codigo de formulario")
     valoracion_micronegocio = fields.Char(string="Valoracion del Micronegocio")
     diagnostico = fields.Text(strint="Diagnóstico") 
+    puntajehacer = fields.Char(string='Puntaje hacer')
     valuacion_diagnostico = fields.Selection(
         selection=[
             ('competitividad', 'Nivel de competitividad'),
@@ -69,7 +70,7 @@ class CrmDiagnostic(models.Model):
 
     #puntajehacer = fields.One2many('crm_diagnostic_line_production_ids', string='Puntaje hacer')
     #puntajehacer = crm_diagnostic_line_innovation_ids
-    puntajehacer = fields.Char(string='Puntaje hacer')
+   
 
     diagnostic_chart = fields.Html(
         compute='_get_chart', store=True, sanitize=False)
@@ -144,6 +145,7 @@ class CrmDiagnostic(models.Model):
             hacer = 0
             verificar = 0
             actuar = 0
+            puntajehacer = 0
 
             for line in diagnostic.crm_diagnostic_line_innovation_ids:
                 planear += int(line.puntaje)
