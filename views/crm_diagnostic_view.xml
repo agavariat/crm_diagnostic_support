@@ -49,7 +49,7 @@
                                 			<th>PLANEAR</th>
                                 			<th>65</th>
                                 			<th><field name="puntaje_planear"/></th>
-                                			<th></th>
+                                			<th><field name="puntaje_%planear"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>HACER</th>
@@ -67,12 +67,12 @@
                                 			<th>ACTUAR</th>
                                 			<th>10</th>
                                 			<th><field name="puntaje_actuar"/></th>
-                                			<th><field name="puntaje_actuar"/>/10*100</th>
+                                			<th></th>
                                 		</tr>
                                 		<tr style="background-color: #bababa;text-white">
                                 			<th>TOTAL</th>
                                 			<th>150</th>
-                                			<th></th>
+                                			<th><field name="puntaje_total"/></th>
                                 			<th></th>
                                 		</tr>
                                 	</tbody>
