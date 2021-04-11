@@ -74,7 +74,7 @@
                                 			<th>TOTAL</th>
                                 			<th>150</th>
                                 			<th><field name="puntaje_total"/></th>
-                                			<th></th>
+                                			<th><field name="porcentaje_total"/></th>
                                 		</tr>
                                 	</tbody>
                                 </table>

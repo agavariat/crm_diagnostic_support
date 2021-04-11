@@ -90,6 +90,7 @@ class CrmDiagnostic(models.Model):
     puntaje_phacer = fields.Char(compute="_get_chart")
     puntaje_pverificar = fields.Char(compute="_get_chart")
     puntaje_pactuar = fields.Char(compute="_get_chart")
+    porcentaje_total = fields.Char(compute="_get_chart")
 
     @api.depends('crm_diagnostic_line_ids')
     def _get_lines_for_areas(self):
@@ -178,7 +179,8 @@ class CrmDiagnostic(models.Model):
             diagnostic.puntaje_phacer = (hacer/60)*100
             diagnostic.puntaje_pverificar = (verificar/15)*100
             diagnostic.puntaje_pactuar = (actuar/10)*100
-            
+            diagnostic.porcentaje_total = (diagnostic.puntaje_total/150)*100
+
         
             
             
