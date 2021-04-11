@@ -22,8 +22,8 @@
             string="Instrumento de Valoración y Diagnostico"
             model="crm.diagnostic"
             report_type="qweb-pdf"
-            file="crm_diagnostic.report_crm_diagnostic_template"
-            name="crm_diagnostic.report_crm_diagnostic_template"
+            file="crm_diagnostic_support.report_crm_diagnostic_template"
+            name="crm_diagnostic_support.report_crm_diagnostic_template"
             print_report_name="'Reporte de diagnostico - %s' % (object.nombre_negocio)"
             paperformat="paperformat_crm_diagnostic"/>
         />
