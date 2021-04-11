@@ -24,20 +24,7 @@
                             </thead>
                         </table>
 
-                        <table style="border-spacing:0;margin-bottom:0;" class="table">
-                            <thead>
-                                <tr>
-                                    <td style="width:10%; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid;vertical-align:middle; horizontal-align:middle;" rowspan="4">
-                                        <span style="font-size: 14px;">Información Importante:</span>
-                                    </td>
-                                    <td style="width:10%; border-bottom: 1px solid; vertical-align:middle; border-right: 1px solid; horizontal-align:middle;" rowspan="4">
-                                        <span style="font-size: 14px;" t-esc="o.x_nempleados"/>
-                                    </td>
-                                </tr>
-                            
-                            </thead>
-                            <tbody></tbody>
-                        </table>
+                        
 
                         <table style="border-spacing:0;margin-bottom:0;" class="table">
                             <thead>
