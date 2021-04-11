@@ -30,7 +30,7 @@
                         </div>
                         <field name="crm_diagnostic_line_innovation_ids" mode="tree">
                             <tree>
-                                <field name="PLANEAR"/>
+                                <field name="puntaje"/>
                             </tree>
                         </field>
 
@@ -61,7 +61,15 @@
                             </tree>
                         </field>
 
-                      
+                        <div class="alert alert-success text-center" role="alert">
+                            <h3>Puntaje hacer</h3>
+                        </div>
+                        <field name="crm_diagnostic_line_ids" mode="tree">
+                            <tree>
+                                <field name="data2"/>
+                            </tree>
+                        </field>
+
 						
                         <group>
                         	<group>                            
