@@ -81,8 +81,10 @@ class CrmDiagnostic(models.Model):
     diagnostic_chart_two = fields.Char(
     compute='_get_chart', store=True)
 
-    puntajehacer = fields.Char(compute="_get_chart", string="Puntaje test")
-    
+    puntaje_hacer = fields.Char(compute="_get_chart")
+    puntaje_planear = fields.Char(compute="_get_chart")
+    puntaje_verificar = fields.Char(compute="_get_chart")
+    puntaje_actuar = fields.Char(compute="_get_chart")
 
     @api.depends('crm_diagnostic_line_ids')
     def _get_lines_for_areas(self):
@@ -162,7 +164,11 @@ class CrmDiagnostic(models.Model):
             
             data2 = self.make_chart_bar([planear, hacer, verificar, actuar])
             diagnostic.char_img_bar = base64.b64encode(data2)
-            diagnostic.puntajehacer = planear
+            diagnostic.puntaje_planear = planear
+            diagnostic.puntaje_hacer = hacer
+            diagnostic.puntaje_verificar = verificar
+            diagnostic.puntaje_actuar = actuar
+        
             
             
     @api.model
