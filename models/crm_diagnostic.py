@@ -69,7 +69,7 @@ class CrmDiagnostic(models.Model):
 
     #puntajehacer = fields.One2many('crm_diagnostic_line_production_ids', string='Puntaje hacer')
     #puntajehacer = crm_diagnostic_line_innovation_ids
-
+    puntajehacer = fields.Char(string='Puntaje hacer')
 
     diagnostic_chart = fields.Html(
         compute='_get_chart', store=True, sanitize=False)
@@ -153,8 +153,9 @@ class CrmDiagnostic(models.Model):
                 verificar += int(line.puntaje)
             for line in diagnostic.crm_diagnostic_line_production_ids:
                 actuar += int(line.puntaje)
+                actuar = puntajehacer
            
-
+            
             data2 = self.make_chart_bar([planear, hacer, verificar, actuar])
             diagnostic.char_img_bar = base64.b64encode(data2)
 
