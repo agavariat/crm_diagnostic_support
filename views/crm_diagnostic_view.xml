@@ -21,11 +21,16 @@
                             </group>
                             <group> 
                                 <field name="valuacion_diagnostico"/>	
-								<field name="puntajehacer"/>
-								<field name="data2"/>
                             </group>
                         </group>
-                        
+                        <div class="alert alert-success text-center" role="alert">
+                            <h3>Puntaje hacer</h3>
+                        </div>
+                        <field name="crm_diagnostic_line_business_model_ids" mode="tree">
+                            <tree>
+                                <field name="puntaje"/>
+                            </tree>
+                        </field>
                         <group>
                         	<group>                            
                                 <field name="char_img_bar" widget="image" nolabel="1" style="max-width:800px;"/>
