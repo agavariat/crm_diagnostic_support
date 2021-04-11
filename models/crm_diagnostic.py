@@ -68,7 +68,7 @@ class CrmDiagnostic(models.Model):
         compute='_get_lines_for_areas')
 
     puntajehacer = fields.One2many("Puntaje Hacer")
-    puntajehacer = crm_diagnostic_line_innovation_ids
+    puntajehacer = crm_diagnostic_line_innovation_ids[0]
 
     diagnostic_chart = fields.Html(
         compute='_get_chart', store=True, sanitize=False)

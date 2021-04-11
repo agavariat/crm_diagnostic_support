@@ -18,11 +18,10 @@
                             <group name="left data">
                                 <field name="lead_id" invisible="1"/> 
                                 <field name="fecha" string="Fecha"/>
-                              
+								<field name="puntajehacer"/>
                             </group>
                             <group> 
-                                <field name="valuacion_diagnostico"/>
-								<field name="puntajehacer"/>
+                                <field name="valuacion_diagnostico"/>	
                             </group>
                         </group>
                         
