@@ -31,6 +31,16 @@
                                 <field name="puntaje"/>
                             </tree>
                         </field>
+
+                        <div class="alert alert-success text-center" role="alert">
+                            <h3>Puntaje hacer</h3>
+                        </div>
+                        <field name="crm_diagnostic_line_ids" mode="tree">
+                            <tree>
+                                <field name="hacer"/>
+                            </tree>
+                        </field>
+						
                         <group>
                         	<group>                            
                                 <field name="char_img_bar" widget="image" nolabel="1" style="max-width:800px;"/>
