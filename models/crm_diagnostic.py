@@ -87,6 +87,9 @@ class CrmDiagnostic(models.Model):
     puntaje_actuar = fields.Char(compute="_get_chart")
     puntaje_total = fields.Char(compute="_get_chart")
     puntaje_pplanear = fields.Char(compute="_get_chart")
+    puntaje_phacer = fields.Char(compute="_get_chart")
+    puntaje_pverificar = fields.Char(compute="_get_chart")
+    puntaje_pactuar = fields.Char(compute="_get_chart")
 
     @api.depends('crm_diagnostic_line_ids')
     def _get_lines_for_areas(self):
@@ -171,8 +174,11 @@ class CrmDiagnostic(models.Model):
             diagnostic.puntaje_verificar = verificar
             diagnostic.puntaje_actuar = actuar
             diagnostic.puntaje_total = planear + hacer + verificar + actuar
-            
             diagnostic.puntaje_pplanear = (planear/65)*100
+            diagnostic.puntaje_phacer = (hacer/60)*100
+            diagnostic.puntaje_pverificar = (verificar/15)*100
+            diagnostic.puntaje_pactuar = (actuar/10)*100
+            
         
             
             

@@ -55,19 +55,19 @@
                                 			<th>HACER</th>
                                 			<th>60</th>
                                 			<th><field name="puntaje_hacer"/></th>
-                                			<th></th>
+                                			<th><field name="puntaje_phacer"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>VERIFICAR</th>
                                 			<th>15</th>
                                 			<th><field name="puntaje_verificar"/></th>
-                                			<th></th>
+                                			<th><field name="puntaje_pverificar"/></th>
                                 		</tr>
                                 		<tr >
                                 			<th>ACTUAR</th>
                                 			<th>10</th>
                                 			<th><field name="puntaje_actuar"/></th>
-                                			<th></th>
+                                			<th><field name="puntaje_pactuar"/></th>
                                 		</tr>
                                 		<tr style="background-color: #bababa;text-white">
                                 			<th>TOTAL</th>
