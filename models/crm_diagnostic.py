@@ -81,7 +81,7 @@ class CrmDiagnostic(models.Model):
     diagnostic_chart_two = fields.Char(
     compute='_get_chart', store=True)
 
-    puntajehacer = fields.Char(compute="_get_chart", store=True)
+    puntajehacer = fields.Char(compute="_get_chart", store=True, string="Puntaje test")
     
 
     @api.depends('crm_diagnostic_line_ids')

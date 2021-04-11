@@ -64,11 +64,11 @@
                         <div class="alert alert-success text-center" role="alert">
                             <h3>Puntaje hacer</h3>
                         </div>
-                        <field name="crm_diagnostic_line_ids" mode="tree">
+                        
                             <tree>
                                 <field name="puntajehacer"/>
                             </tree>
-                        </field>
+                      
 
 						
                         <group>
