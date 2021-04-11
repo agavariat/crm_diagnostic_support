@@ -179,7 +179,7 @@ class CrmDiagnostic(models.Model):
             diagnostic.puntaje_phacer = (hacer/60)*100
             diagnostic.puntaje_pverificar = (verificar/15)*100
             diagnostic.puntaje_pactuar = (actuar/10)*100
-            diagnostic.porcentaje_total = (diagnostic.puntaje_total/150)*100
+            diagnostic.porcentaje_total = ((planear + hacer + verificar + actuar)/150)*100
 
         
             
