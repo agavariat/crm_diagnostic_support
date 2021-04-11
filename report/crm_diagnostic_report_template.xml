@@ -60,31 +60,31 @@
                                 		<tr>
                                 			<th>PLANEAR</th>
                                 			<th>65</th>
-                                			<th><field name="puntaje_planear"/></th>
-                                			<th><field name="puntaje_pplanear"/></th>
+                                			<th><field name="o.puntaje_planear"/></th>
+                                			<th><field name="o.puntaje_pplanear"/></th>
                                 		</tr>
                                 		<tr>
                                 			<th>HACER</th>
                                 			<th>60</th>
-                                			<th><field name="puntaje_hacer"/></th>
-                                			<th><field name="puntaje_phacer"/></th>
+                                			<th><field name="o.puntaje_hacer"/></th>
+                                			<th><field name="o.puntaje_phacer"/></th>
                                 		</tr>
                                 		<tr>
                                 			<th>VERIFICAR</th>
                                 			<th>15</th>
-                                			<th><field name="puntaje_verificar"/></th>
-                                			<th><field name="puntaje_pverificar"/></th>
+                                			<th><field name="o.puntaje_verificar"/></th>
+                                			<th><field name="o.puntaje_pverificar"/></th>
                                 		</tr>
                                 		<tr>
                                 			<th>ACTUAR</th>
                                 			<th>10</th>
-                                			<th><field name="puntaje_actuar"/></th>
-                                			<th><field name="puntaje_pactuar"/></th>
+                                			<th><field name="o.puntaje_actuar"/></th>
+                                			<th><field name="o.puntaje_pactuar"/></th>
                                 		</tr>
                                 		<tr style="background-color: #bababa;text-white">
                                 			<th>TOTAL</th>
                                 			<th>150</th>
-                                			<th><field name="puntaje_total"/></th>
+                                			<th><field name="o.puntaje_total"/></th>
                                 			<th></th>
                                 		</tr>
                                 	</tbody>
