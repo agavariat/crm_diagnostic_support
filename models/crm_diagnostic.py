@@ -170,7 +170,7 @@ class CrmDiagnostic(models.Model):
             diagnostic.puntaje_hacer = hacer
             diagnostic.puntaje_verificar = verificar
             diagnostic.puntaje_actuar = actuar
-            diagnostic.puntaje_total = planear + hacer + verificar + actual
+            diagnostic.puntaje_total = planear + hacer + verificar + actuar
             diagnostic.puntaje_pplanear = (planear/65)*100
         
             
