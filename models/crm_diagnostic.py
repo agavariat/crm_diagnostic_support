@@ -31,7 +31,6 @@ class CrmDiagnostic(models.Model):
     codigo_formulario = fields.Char(string="Codigo de formulario")
     valoracion_micronegocio = fields.Char(string="Valoracion del Micronegocio")
     diagnostico = fields.Text(strint="Diagnóstico") 
-    puntajehacer = fields.Char(string='Puntaje hacer')
     #puntaje = fields.Char(string='Puntaje hacer')
     valuacion_diagnostico = fields.Selection(
         selection=[
@@ -43,6 +42,7 @@ class CrmDiagnostic(models.Model):
     )
 
     data2=fields.Char('',compute="_get_chart")
+    data5=fields.Char('', compute="_get_chart")
     
     company_id = fields.Many2one(
         'res.company',
@@ -80,6 +80,9 @@ class CrmDiagnostic(models.Model):
     #char_img_barx = fields.Binary(compute='_get_chart', store=True,)
     diagnostic_chart_two = fields.Char(
     compute='_get_chart', store=True)
+
+    puntajehacer = fields.Char(compute="_get_chart", store=True)
+    
 
     @api.depends('crm_diagnostic_line_ids')
     def _get_lines_for_areas(self):
@@ -156,7 +159,7 @@ class CrmDiagnostic(models.Model):
             for line in diagnostic.crm_diagnostic_line_production_ids:
                 actuar += int(line.puntaje)
                 
-            
+            data5 = self.puntajehacer([planear, hacer, verificar, actuar])
             data2 = self.make_chart_bar([planear, hacer, verificar, actuar])
             diagnostic.char_img_bar = base64.b64encode(data2)
 
