@@ -20,7 +20,9 @@
                                 <field name="fecha" string="Fecha"/>
                             </group>
                             <group> 
-                                <field name="valuacion_diagnostico"/>	
+                            	
+                                <field name="valuacion_diagnostico"/>
+
                             </group>
 							
                         </group>
