@@ -69,8 +69,6 @@ class CrmDiagnostic(models.Model):
         'crm.diagnostic.line',
         compute='_get_lines_for_areas')
 
-    #puntajehacer = fields.One2many('crm_diagnostic_line_production_ids', string='Puntaje hacer')
-    #puntajehacer = crm_diagnostic_line_innovation_ids
    
 
     diagnostic_chart = fields.Html(

@@ -17,7 +17,7 @@
                                     <td style="width:10%; border-left: 1px solid; border-top: 1px solid; border-bottom: 1px solid; border-right: 1px solid; text-align: right;">
                                         <span>Fecha:</span>
                                     </td>
-                                    <td style="width:10%; border-left: 1px solid; border-top: 1px solid; border-right: 1px solid; border-bottom: 1px solid;">
+                                    <td style="width:15%; border-left: 1px solid; border-top: 1px solid; border-right: 1px solid; border-bottom: 1px solid;">
                                         <span t-esc="o.fecha"/>
                                     </td>
                                 </tr>
@@ -89,6 +89,20 @@
                                 		</tr>
                                 	</tbody>
                                 </table>
+
+                        <table style="border-spacing:0;margin-bottom:0;" class="table">
+                            <thead>
+                                <tr>
+                                    <td style="width:10%; border-bottom: 1px solid; border-right: 1px solid; border-left: 1px solid;vertical-align:middle; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;">Hecho por:</span>
+                                    </td>
+                                    <td style="width:10%; border-bottom: 1px solid; vertical-align:middle; border-right: 1px solid; horizontal-align:middle;" rowspan="4">
+                                        <span style="font-size: 14px;" t-esc="o.user_id"/>
+                                    </td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                                 </div>
                             </div>
                 </div>
