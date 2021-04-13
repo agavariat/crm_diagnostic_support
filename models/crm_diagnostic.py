@@ -90,6 +90,9 @@ class CrmDiagnostic(models.Model):
     puntaje_pactuar = fields.Char(compute="_get_chart")
     porcentaje_total = fields.Char(compute="_get_chart")
 
+    
+    x_realiza = fields.Many2one('res.users_id', 'Realizado por:')
+
     @api.depends('crm_diagnostic_line_ids')
     def _get_lines_for_areas(self):
       for record in self:
