@@ -99,9 +99,7 @@
                                 	</tbody>
                                 </table>
                                 </div>
-                                <div>
-                                    <span t-field="o.x_realiza"/>
-                                </div>
+                                
                             </div>
                 </div>
             </t>
